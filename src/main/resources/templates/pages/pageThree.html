@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<div th:replace="common/header :: header"></div>
+	</head>
+	<body>
+		<section class="body">
+			<!-- start: header -->
+			<div th:replace="common/northPanel :: northHeaderPanel"></div>
+			<!-- end: header -->
+			<div class="inner-wrapper">
+				<aside id="sidebar-left" class="sidebar-left">
+							<!-- start: sidebar -->
+				<div class="sidebar-header">
+					<div class="sidebar-title">
+							Navigation
+					</div>
+					<div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+							<i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+					</div>
+				</div>
+					<div class="nano">
+						<div class="nano-content">
+				<div th:insert="common/navigation :: navigation"></div>
+				</div>
+					</div>
+				<!-- end: sidebar -->
+				</aside>
+				<section role="main" class="content-body">
+					<header class="page-header">
+						<div th:insert="common/northLowerPanel :: breadcrumbsPanel"></div>
+					</header>
+				</section>
+			</div><!-- end: class inner-wrapper -->
+		</section>
+		<div th:replace="common/footer :: footer"></div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<div th:replace="common/header :: header"></div>
+<body>
+	<!-- start: body class -->
+	<section class="body">
+
+	  	<!-- start: north header panel -->
+		<div th:replace="common/northPanel :: northHeaderPanel"></div>
+	  	<!-- end: north header panel -->
+		
+		<div class="inner-wrapper">
+			<!-- start: sidebar -->
+			<aside id="sidebar-left" class="sidebar-left">
+				<div th:insert="common/eastPanel :: navigationPanel"></div>
+			</aside>
+			<!-- end: sidebar -->
+			<section role="main" class="content-body">
+				<header class="page-header">
+					<div th:insert="common/northLowerPanel :: breadcrumbsPanel"></div>
+				</header>
+					<!-- start: page -->
+					<!-- end: page -->
+			</section>
+		</div>
+		
+	</section>
+	<!-- end: body class -->
+	<div th:insert="common/footer :: footer"></div>
+</body>
+</html>
